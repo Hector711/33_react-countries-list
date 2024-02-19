@@ -2,4 +2,120 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+* {
+  /* border: 1px solid white; */
+  /* padding: 1rem; */
+}
 
+/* div {
+  border: 1px solid rgb(255, 63, 63);
+} */
+
+html, body {
+  background-color: #1c1c1e;
+  background-image: linear-gradient(45deg, #1e1e1e, #111111);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #e4e4e4;
+}
+
+
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background: #fff;
+  letter-spacing: -0.0025rem;
+}
+
+
+body,
+figure {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4, 
+h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #b3baf5, #6369a0, #573e3e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h5{
+  font-size: 1.4rem;
+}
+
+p {
+  color: #e4e4e4;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+  text-wrap: pretty;
+  word-wrap: break-word;
+}
+
+
+
+
+
+/* ============== NAVBAR ============= */
+
+.nav-li {
+  padding: 0.5rem;
+  background-color: #1e1e1e;
+  border-radius: 7px;
+  color: #b3baf5;
+}
+
+nav {
+  background: linear-gradient(30deg, #383b59, #111111);
+  /* background-image: linear-gradient(45deg, #1e1e1e, #111111); */
+
+  
+}
