@@ -76,8 +76,10 @@ h1 {
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
 }
 
 h5 {
@@ -98,10 +100,11 @@ p {
 .nav-li {
   padding-inline: 0.9rem;
   padding-block: 0.4rem;
-  background-color: #1e1e1e;
+  background-color: #b3baf5;
   border-radius: 4px;
-  color: #d4d7f2;
+  color: #282932;
   text-transform: uppercase;
+
 }
 
 nav {
