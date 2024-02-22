@@ -13,7 +13,7 @@ function Navbar() {
           <h3> Countries List</h3>
         </Link>
         <Link className="nav-li" to="/search">
-          <h3>Buscador</h3>
+          <h3>Search</h3>
         </Link>
       </div>
     </nav>
