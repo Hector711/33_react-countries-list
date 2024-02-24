@@ -16,13 +16,13 @@ body {
   /* background-image: linear-gradient(45deg, #1e1e1e, #111111); */
   background-image: url("https://i.pinimg.com/originals/96/1d/27/961d27ec840890c86fc3cde4824c95cb.jpg");
   background-color: black;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center 290px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   width: 100%;
-  height: 400px;
-  height: 100%;
+  height: full;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   color: #e4e4e4;
@@ -79,7 +79,6 @@ h3 {
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 1px;
-
 }
 
 h5 {
@@ -95,6 +94,19 @@ p {
   word-wrap: break-word;
 }
 
+/* ========= MAIN ======== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 66.6666667%; /* Equivalente a h-4/6 */
+  margin: 8px; /* Equivalente a m-2 */
+  width: 80%;
+  gap: 2rem;
+}
+
 /* ============== NAVBAR ============= */
 
 .nav-li {
@@ -104,22 +116,23 @@ p {
   border-radius: 4px;
   color: #282932;
   text-transform: uppercase;
-
 }
 
 nav {
-  /* background: linear-gradient(30deg, #383b59, #111111); */
+  background-color: black;
   border-bottom: 2px solid #383b59;
   /* background-image: linear-gradient(45deg, #1e1e1e, #111111); */
 }
 
 section {
   /* border: 1px solid white; */
-
 }
-#layout, #layout *{
+#layout,
+#layout * {
   /* border: 1px solid white; */
 }
 #root {
   padding: 1rem;
 }
+
+/* ============== HOME ============= */

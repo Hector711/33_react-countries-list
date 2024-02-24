@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 function Home() {
   return (
     <Layout className="lay">
-      <section className="flex flex-col justify-center items-center h-96 m-2 w-4/5">
+      <main >
         <h1 className="w-80">API Countries</h1>
         <h5 className="p-7">The Ultimate List of Countries Across the Globe.</h5>
 
@@ -14,7 +14,7 @@ function Home() {
           <h5>CLICK HERE TO SEE IT</h5>
         </Link> */}
 
-      </section>
+      </main>
     </Layout>
   );
 }
