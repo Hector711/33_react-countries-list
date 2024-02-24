@@ -127,10 +127,19 @@ nav {
 section {
   /* border: 1px solid white; */
 }
+
+/* ============== LAYOUT ============= */
+
+#layout {
+  min-height: 800px;
+}
+
 #layout,
 #layout * {
   /* border: 1px solid white; */
+
 }
+
 #root {
   padding: 1rem;
 }
