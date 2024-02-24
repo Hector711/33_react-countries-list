@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../Components/Layout";
-import Card from "../Components/Card";
+import Card from "../Components/MiniCard";
 
-import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
-import Autocomplete from "@mui/material/Autocomplete";
+import { Input, Button } from "@material-tailwind/react";
 
 function Search() {
   const [countryItem, upCountry] = useState();
@@ -24,7 +22,7 @@ function Search() {
   };
 
   const fetchData = async () => {
-    if (!idCountry) return; // No hagas nada si idCountry está vacío
+    if (!idCountry) return; 
     const baseURL = "https://restcountries.com/v3.1/name/";
     const secURL =
       "?fields=name,flags,languages,capital,region,population,currencies";
@@ -34,67 +32,58 @@ function Search() {
       .replace(/\s+/g, "-")}${secURL}`;
     try {
       const res = await fetch(url);
+      if (!res.ok) {
+        // Si la respuesta no es exitosa, lanza un error
+        throw new Error("Country not found");
+      }
       const result = await res.json();
-      // console.log(result);
       console.log(countryItem);
 
       upCountry(result);
     } catch (error) {
       console.error(error);
+      alert("Country not found. Please enter a valid country name.");
     }
   };
+
+  const [email, setEmail] = React.useState("");
+  const onChange = ({ target }) => setEmail(target.value);
 
   return (
     <Layout className="lay">
       <main>
         <h1>Country Search Engine</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            <input
+
+          <form  onSubmit={handleSubmit} className="relative flex w-full max-w-[24rem] mt-5">
+            <Input
               type="text"
+              placeholder="Country Name"
               value={idCountry}
               onChange={handleInputChange}
+              className=" p-1 rounded-lg text-black"
+              containerProps={{
+                className: "min-w-0",
+              }}
               onKeyDown={handleKeyDown}
+
             />
-          </label>
-          <button type="submit">Search</button>
-
-
-
-          <Stack spacing={2} sx={{ width: 400 }} className=" bg-indigo-400 rounded-2xl">
-            
-            <Autocomplete
-              freeSolo
-              id="free-solo-2-demo"
-              // disableClearable
-              options={top100Films.map((option) => option.title)}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Country Name"
-                  InputProps={{
-                    ...params.InputProps,
-                    type: "search",
-                  }}
-                />
-              )}
-            />
-          </Stack>
+            <Button
+              size="sm"
+              color={idCountry? "gray" : "black"}
+              disabled={!email}
+              className="!absolute right-2 top-1 rounded text-gray-500 "
+              type="submit"
+            >
+              Search
+            </Button>
+          </form>
 
           {countryItem?.map((country, index) => (
             <Card key={index} data={country} />
           ))}
-        </form>
       </main>
     </Layout>
   );
 }
 
-const top100Films = [
-  { title: "The Shawshank Redemption", year: 1994 },
-  { title: "The Godfather", year: 1972 },
-];
-
 export default Search;
-
-// import * as React from 'react';

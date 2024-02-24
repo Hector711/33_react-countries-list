@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../Components/Layout";
-import Card from "../Components/Card";
+import MiniCard from "../Components/MiniCard";
 
 function Countries() {
   const [list, updateList] = useState([]);
@@ -28,7 +28,7 @@ function Countries() {
         <h1>Countries List</h1>
         <div className="grid grid-cols-4 gap-10 ">
           {list.map((country, index) => (
-            <Card key={index} data={country} />
+            <MiniCard key={index} data={country} />
           ))}
         </div>
       </main>

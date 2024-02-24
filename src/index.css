@@ -76,9 +76,10 @@ h1 {
 }
 
 h3 {
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
+
 }
 
 h5 {
@@ -116,6 +117,11 @@ main {
   border-radius: 4px;
   color: #282932;
   text-transform: uppercase;
+  background: linear-gradient(45deg, #b3baf5, #6369a0);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; */
 }
 
 nav {

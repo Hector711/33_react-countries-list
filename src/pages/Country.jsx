@@ -3,12 +3,12 @@ import Layout from "../Components/Layout";
 
 
 
-function Home() {
+function Country() {
   return (
     <Layout className="lay">
       <main>
 
-      <h1>Country</h1>
+      
 
       
       </main>
@@ -16,4 +16,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Country;
