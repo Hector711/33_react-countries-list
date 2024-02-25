@@ -1,18 +1,12 @@
 import React from "react";
-import Layout from "../Components/Layout";
 
-
-
-function Country() {
+function Country({ country }) {
+  
   return (
-    <Layout className="lay">
-      <main>
-
+    <div>
+      <h1>España</h1>
       
-
-      
-      </main>
-    </Layout>
+    </div>
   );
 }
 

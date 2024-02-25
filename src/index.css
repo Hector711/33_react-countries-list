@@ -7,10 +7,6 @@
   /* padding: 1rem; */
 }
 
-/* div {
-  border: 1px solid rgb(255, 63, 63);
-} */
-
 html,
 body {
   /* background-image: linear-gradient(45deg, #1e1e1e, #111111); */
@@ -95,18 +91,19 @@ p {
   word-wrap: break-word;
 }
 
-/* ========= MAIN ======== */
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 66.6666667%; /* Equivalente a h-4/6 */
-  margin: 8px; /* Equivalente a m-2 */
-  width: 80%;
-  gap: 2rem;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============== NAVBAR ============= */
 
@@ -134,10 +131,20 @@ section {
   /* border: 1px solid white; */
 }
 
+
 /* ============== LAYOUT ============= */
 
 #layout {
+  /* border: 1px solid rgb(28, 255, 8); */
+
   min-height: 800px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
 }
 
 #layout,
@@ -146,8 +153,28 @@ section {
 
 }
 
-#root {
-  padding: 1rem;
+/* ========= MAIN ======== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  min-width: 1200px;
+  gap: 2rem;
 }
+
+main {
+  /* border: 1px solid rgb(255, 251, 8); */
+
+}
+main * {
+  /* border: 1px solid rgb(255, 8, 8); */
+
+}
+
+
+
 
 /* ============== HOME ============= */

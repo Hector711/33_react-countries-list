@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../Components/Layout";
-import Card from "../Components/MiniCard";
+import MaxiCard from "../Components/MaxiCard";
 
 import { Input, Button } from "@material-tailwind/react";
 
@@ -46,8 +46,7 @@ function Search() {
     }
   };
 
-  const [email, setEmail] = React.useState("");
-  const onChange = ({ target }) => setEmail(target.value);
+  
 
   return (
     <Layout className="lay">
@@ -70,7 +69,6 @@ function Search() {
             <Button
               size="sm"
               color={idCountry? "gray" : "black"}
-              disabled={!email}
               className="!absolute right-2 top-1 rounded text-gray-500 "
               type="submit"
             >
@@ -78,9 +76,12 @@ function Search() {
             </Button>
           </form>
 
+              <section className=" w-full flex flex-col justify-center items-center">
+
           {countryItem?.map((country, index) => (
-            <Card key={index} data={country} />
-          ))}
+            <MaxiCard key={index} data={country} />
+            ))}
+            </section>
       </main>
     </Layout>
   );

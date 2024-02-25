@@ -1,19 +1,12 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
 import Layout from "../Components/Layout";
-import { Link } from "react-router-dom"
 
 function Home() {
   return (
     <Layout className="lay">
       <main >
         <h1 className="w-80">API Countries</h1>
-        <h5 className="p-7">The Ultimate List of Countries Across the Globe.</h5>
-
-        {/* <Link to="/countries" className="flex justify-center items-center w-2/5 border border-indigo-400	shadow-2xl rounded-md p-3 mt-40 ">
-          <h5>CLICK HERE TO SEE IT</h5>
-        </Link> */}
-
+        <h5 className="p-7">List of Countries Across the Globe.</h5>
       </main>
     </Layout>
   );
